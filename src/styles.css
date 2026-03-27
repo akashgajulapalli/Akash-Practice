@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.employee-main {
+  display: flex;
+  /* height: 200px; */
+}
+.employee-list {
+  width: 35%;
+}
+.employee-data {
+  width: 65%;
+}
+.single-employee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.single-employee + .single-employee {
+  margin-top: 10px;
+}
+.emp-name {
+  font-size: 14px;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
