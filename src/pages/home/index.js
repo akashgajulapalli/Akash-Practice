@@ -1,4 +1,4 @@
-import HOCAuthentication from "../../components/HocAuthcomp";
+// import HOCAuthentication from "../../components/HocAuthcomp";
 
 function Home({ data }) {
   return (
@@ -21,4 +21,4 @@ function Home({ data }) {
   );
 }
 
-export default HOCAuthentication(Home);
+export default Home;
