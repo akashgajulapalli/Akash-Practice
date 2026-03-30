@@ -12,5 +12,5 @@ export default function App() {
   // return <Searches />;
   // return <Debounce />;
   // return <Throttling />;
-  return <EmployeeDB />;
+  return <div className="App"><EmployeeDB /></div>;
 }
