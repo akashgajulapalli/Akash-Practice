@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AddEmployee from "../../components/EmployeeDB/AddEmployee";
 
 function EmployeeDB() {
   const [data, setData] = useState(null);
@@ -96,22 +97,8 @@ function EmployeeDB() {
         </div>
       </section>
       {openAddPopup && (
-        <div
-          className="overlay-addpopup"
-          onClick={() => setOpenAddPopup(false)}
-        >
-          <div className="add-popup" onClick={(e) => e.stopPropagation()}>
-            <div className="single-row">
-              <input type="text" name="firstName" placeholder="First Name" required  />
-              <input type="text" name="firstName" placeholder="First Name" required  />
-            </div>
-            <div className="single-row"><input type="text" name="image" placeholder="Image URL(Optional)"  /></div>
-            <div className="single-row"><input type="email" name="email" placeholder="Email"  required /></div>
-            <div className="single-row"><input type="nunber" name="contact" placeholder="Contact"  required /></div>
-            <div className="single-row"><input type="number" name="salary" placeholder="Salary"  required /></div>
-            <div className="single-row"><input type="text" name="address" placeholder="Address"  required /></div>
-            <div className="single-row"><input type="date" name="dob" placeholder="Image URL(Optional)"  required /></div>
-          </div>
+        <div className="overlay-addpopup" onClick={() => setOpenAddPopup(false)}>
+          <AddEmployee setOpenAddPopup={setOpenAddPopup} setData={setData} data={data} />
         </div>
       )}
     </>

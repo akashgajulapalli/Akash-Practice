@@ -3,23 +3,25 @@
   text-align: center;
   height: 100%;
 }
-p,h1{
+p,
+h1,
+h2 {
   margin: 0;
 }
-.edb-main{
+.edb-main {
   position: relative;
   padding: 0px 5px;
 }
-.edb-main .add-job-main{
+.edb-main .add-job-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px 0px;
 }
 
-.add-job-main .add-job-div button{
-      height: 30px;
-    border-radius: 50px;
+.add-job-main .add-job-div button {
+  height: 30px;
+  border-radius: 50px;
 }
 
 .employee-main {
@@ -49,10 +51,10 @@ p,h1{
   background-color: #efefef;
   cursor: pointer;
 }
-.single-employee:hover{
+.single-employee:hover {
   background-color: #ccc;
 }
-.single-employee.active{
+.single-employee.active {
   background-color: #ccc;
 }
 .single-employee + .single-employee {
@@ -65,7 +67,7 @@ p,h1{
 button {
   cursor: pointer;
 }
-.e-i-head{
+.e-i-head {
   margin: 10px 0px;
 }
 .e-i-head p {
@@ -74,16 +76,16 @@ button {
 .e-i-head + .employee-info-single {
   border-top: 1px solid #000;
 }
-.employee-info-single .img-container img{
+.employee-info-single .img-container img {
   width: 200px;
 }
-.employee-info-single .img-container + .content-container{
+.employee-info-single .img-container + .content-container {
   margin-top: 20px;
 }
-.employee-info-single .content-container .emp-name{
+.employee-info-single .content-container .emp-name {
   font-size: 26px;
 }
-.employee-info-single .content-container .emp-font{
+.employee-info-single .content-container .emp-font {
   font-size: 16px;
 }
 .employee-info-single .content-container p + p {
@@ -101,13 +103,55 @@ button {
   z-index: 9999;
 }
 
-.add-popup{
-    width: 600px;
-    height: 400px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.add-popup {
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
 }
 .add-popup .single-row {
   display: flex;
+  justify-content: center;
+}
+.add-popup .single-row + .single-row {
+  margin-top: 10px;
+}
+.add-popup .single-row .form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.add-popup .single-row .form-field span {
+  font-size: 10px;
+  color: #900000;
+      text-align: left;
+    margin-top: 3px;
+}
+.add-popup .single-row input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding-left: 7px;
+}
+.add-popup .single-row .form-field + .form-field {
+  margin-left: 10px;
 }
 
+.add-popup .single-row button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  color: #fff;
+  background-color: #0c67e7;
+}
+
+.add-popup .single-row button.disabled {
+  background-color: #ccc;
+  color: #000;
+}
