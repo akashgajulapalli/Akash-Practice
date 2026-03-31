@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import AddEmployee from "../../components/EmployeeDB/AddEmployee";
+import EditEmployee from "../../components/EmployeeDB/EditEmployee";
 
 function EmployeeDB() {
   const [data, setData] = useState(null);
   const [openAddPopup, setOpenAddPopup] = useState(false);
+  const [openEditPopup, setOpenEditPopup] = useState(false);
+  const [editItem, setEditItem] = useState(null)
   useEffect(() => {
     const fetchData = async () => {
       console.log("API CALLED");
@@ -39,6 +42,11 @@ function EmployeeDB() {
     setData(updatedData);
   };
 
+  const editJob = (item) => {
+    setOpenEditPopup(true);
+    setEditItem(item)    
+  }
+
   return (
     <>
       <section className="edb-main">
@@ -62,6 +70,7 @@ function EmployeeDB() {
                   {item.firstName} {item.lastName}
                 </p>
                 <div>
+                  <button onClick={() => editJob(item)}>Edit</button>
                   <button onClick={() => deleteJob(item.id)}>Delete</button>
                 </div>
               </div>
@@ -101,6 +110,13 @@ function EmployeeDB() {
           <AddEmployee setOpenAddPopup={setOpenAddPopup} setData={setData} data={data} />
         </div>
       )}
+      {
+        openEditPopup && (
+          <div className="overlay-addpopup" onClick={() => setOpenEditPopup(false)}>
+            <EditEmployee setOpenEditPopup={setOpenEditPopup} setData={setData} data={data} editItem={editItem} setEditItem={setEditItem} />
+          </div>
+        )
+      }
     </>
   );
 }

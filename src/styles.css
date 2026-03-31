@@ -60,6 +60,9 @@ h2 {
 .single-employee + .single-employee {
   margin-top: 10px;
 }
+.single-employee button + button {
+  margin-left: 5px;
+}
 .emp-name {
   font-size: 14px;
   margin: 0;
@@ -67,6 +70,7 @@ h2 {
 button {
   cursor: pointer;
 }
+
 .e-i-head {
   margin: 10px 0px;
 }
