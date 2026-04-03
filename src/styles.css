@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -129,8 +132,8 @@ button {
 .add-popup .single-row .form-field span {
   font-size: 10px;
   color: #900000;
-      text-align: left;
-    margin-top: 3px;
+  text-align: left;
+  margin-top: 3px;
 }
 .add-popup .single-row input {
   box-sizing: border-box;
@@ -158,4 +161,30 @@ button {
 .add-popup .single-row button.disabled {
   background-color: #ccc;
   color: #000;
+}
+
+/* Countdown timer css */
+.count-down-main-4-1 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.count-div {
+  text-align: center;
+}
+.container-inputs-time {
+  justify-self: center;
+  align-self: center;
+  border: none;
+  font-size: 50px;
+  width: 90px;
+  height: 50px;
+}
+.container-inputs-time:focus,
+.container-inputs-time:active {
+  outline: none;
+  border: none;
 }

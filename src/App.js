@@ -5,6 +5,7 @@ import Searches from "./pages/searches";
 import Debounce from "./pages/debounce";
 import Throttling from "./pages/throttling";
 import EmployeeDB from "./pages/employee-db-management";
+import CountDownTimer from "./pages/countdown-timer";
 
 export default function App() {
   // return <Home />;
@@ -12,5 +13,6 @@ export default function App() {
   // return <Searches />;
   // return <Debounce />;
   // return <Throttling />;
-  return <div className="App"><EmployeeDB /></div>;
+  // return <div className="App"><EmployeeDB /></div>;
+  return <CountDownTimer />
 }
