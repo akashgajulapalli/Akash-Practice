@@ -7,6 +7,7 @@ import Throttling from "./pages/throttling";
 import EmployeeDB from "./pages/employee-db-management";
 import CountDownTimer from "./pages/countdown-timer";
 import FileExplorer from "./pages/file-explorer";
+import Pagination from "./pages/pagination";
 
 export default function App() {
   // return <Home />;
@@ -16,9 +17,14 @@ export default function App() {
   // return <Throttling />;
   // return <div className="App"><EmployeeDB /></div>;
   // return <CountDownTimer />
+  // return (
+  //   <div className="App">
+  //     <FileExplorer />
+  //   </div>
+  // );
   return (
     <div className="App">
-      <FileExplorer />
+      <Pagination />
     </div>
   );
 }

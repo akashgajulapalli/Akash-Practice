@@ -211,7 +211,7 @@ button {
   }
   .inner-folder {
     padding-left: 25px;
-    .inputContainer{
+    .inputContainer {
       display: flex;
       img {
         width: 30px;
@@ -224,14 +224,50 @@ button {
   align-items: center;
   justify-content: space-between;
   width: 320px;
-  span{
+  span {
     display: flex;
     align-items: center;
   }
   button + button {
-      margin-left: 10px;
-    }
+    margin-left: 10px;
+  }
   img {
     width: 30px;
   }
+}
+
+/* Pagination */
+.pagination-head {
+  padding: 0px 20px;
+}
+.pagination-head .all-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.pagination-head .all-products .single-product {
+  padding: 5px;
+  background-color: #eeebeb;
+}
+.pagination-head .all-products .single-product .pg-img-container img{
+  width: 200px;  
+}
+.pg-pagenation-head{
+  margin-top: 50px;
+}
+.pg-pagenation-head button{
+  padding: 10px 15px;
+  border: 2px solid #000;
+  cursor: pointer;
+  outline: none;
+}
+.pg-pagenation-head .arrow{
+  background-color: #0c67e7;
+  color: #fff;
+}
+.pg-pagenation-head button.active{
+  background-color: #ccc;
+}
+.pg-pagenation-head button + button{
+  margin-left: 10px;
 }
